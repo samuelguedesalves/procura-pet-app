@@ -14,11 +14,15 @@ import ButtomSlider from './buttonSlider';
 
 const {width, height} = Dimensions.get('window');
 
-export default function Slider (){
+export default function Slider ({routerManager}){
     const [ slider, setSlider ] = useState(0);
-
     function skipeSlider(){
-        setSlider(slider+1);
+        if(slider >= 2){
+            routerManager(1);
+        }else{
+            setSlider(slider+1);
+            console.log(slider);
+        }
     }
 
     return(

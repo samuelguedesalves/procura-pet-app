@@ -13,6 +13,8 @@ import {
     TouchableOpacity
 } from 'react-native';
 
+import { Feather } from '@expo/vector-icons';
+
 import SvgCicle from '../assets/svg/circle';
 
 import Logo from '../assets/logo.png';
@@ -27,15 +29,27 @@ export default function SignIn(){
         >
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                 <View style={Style.container} >
-                    <View style={{flex: 1}} >
+                    <View >
                         <View style={Style.circle} >
                             <SvgCicle/>
                         </View>
-                        <View style={Style.containerLogo} >
-                            <Image source={Logo} style={Style.logo} />
+                        <View 
+                            style={{
+                                position: "absolute",
+                                zIndex:-2,
+                                left: -470,
+                                transform: [
+                                    {scale: 0.2}
+                                ],
+
+                            }} 
+                        >
+                            <SvgCicle/>
                         </View>
                     </View>
                     <View style={Style.containerInput} >
+                    <Text style={Style.title} >Login</Text>
+
                         <TextInput placeholder='E-mail' style={Style.input}/>
                         <TextInput placeholder='Senha' style={[Style.input, { marginTop: 25, }]}/>
 
@@ -49,7 +63,8 @@ export default function SignIn(){
                                 justifyContent: 'center',
                             }]} 
                         >
-                            <Text style={{color: '#fff', fontSize: 24, fontWeight: 'bold'}} >Login</Text>
+                            <Text style={{color: '#fff', fontSize: 24, fontWeight: 'bold', marginRight: 10,}} >Login</Text>
+                            <Feather name="log-in" size={24} color="#fff" />
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -68,19 +83,23 @@ const Style = StyleSheet.create({
     circle:{
         position: 'absolute',
         zIndex: -1,
-        left: -220,
-        top: -330,
+        top: 450,
+        left: 50,
     },
-    logo:{
-        width: 326,
-        height: 326,
-    },
-    containerLogo:{
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'center',
-    },
+    // logo:{
+    //     width: 326,
+    //     height: 326,
+    //     transform: [
+    //         {scale: 0.5}
+    //     ]
+    // },
+    // containerLogo:{
+    //     flex: 1,
+    //     flexDirection: 'row',
+    //     justifyContent: 'center',
+    // },
     containerInput:{
+        marginTop: 80,
         flex: 1,
         margin: 42,
     },
@@ -97,5 +116,12 @@ const Style = StyleSheet.create({
         shadowOpacity: 0.8,
         shadowRadius: 2,  
         elevation: 3,
+    },
+    title: {
+        fontSize: 40,
+        color: '#fff',
+        fontFamily: 'Roboto',
+        fontWeight: 'bold',
+        marginBottom: 30,
     }
 });
