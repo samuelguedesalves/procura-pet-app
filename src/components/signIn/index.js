@@ -3,7 +3,6 @@ import {
     View, 
     Text, 
     TextInput, 
-    Image, 
     StyleSheet, 
     Dimensions, 
     KeyboardAvoidingView, 
@@ -15,13 +14,12 @@ import {
 
 import { Feather } from '@expo/vector-icons';
 
-import SvgCicle from '../assets/svg/circle';
+import SvgCicle from '../../assets/svg/circle';
 
-import Logo from '../assets/logo.png';
 
 const {width, height} = Dimensions.get('window');
 
-export default function SignIn(){
+export default function SignIn({routerManager}){
     return(
         <KeyboardAvoidingView
             behavior={Platform.OS == "ios" ? "padding" : "height"}
@@ -62,6 +60,7 @@ export default function SignIn(){
                                 alignItems: 'center',
                                 justifyContent: 'center',
                             }]} 
+                            onPress={()=> routerManager(3)}
                         >
                             <Text style={{color: '#fff', fontSize: 24, fontWeight: 'bold', marginRight: 10,}} >Login</Text>
                             <Feather name="log-in" size={24} color="#fff" />
@@ -86,18 +85,6 @@ const Style = StyleSheet.create({
         top: 450,
         left: 50,
     },
-    // logo:{
-    //     width: 326,
-    //     height: 326,
-    //     transform: [
-    //         {scale: 0.5}
-    //     ]
-    // },
-    // containerLogo:{
-    //     flex: 1,
-    //     flexDirection: 'row',
-    //     justifyContent: 'center',
-    // },
     containerInput:{
         marginTop: 80,
         flex: 1,

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {View, StatusBar} from 'react-native';
 
-import Slider from './components/slider';
+import Slider from './components/slider/slider';
 
 import SignIn from './components/signIn';
 
@@ -9,7 +9,7 @@ import Router from './components/router';
 
 export default function Index(){
     // const [router, setRouter] = useState(0);
-    const [router, setRouter] = useState(3);
+    const [router, setRouter] = useState(0);
 
     function routerManager(sendTo){
         setRouter(sendTo);
@@ -20,7 +20,7 @@ export default function Index(){
             <Slider routerManager={routerManager} />
         )
     }else{
-        if( router === 2 ){
+        if( router === 1 ){
             return(
                 <SignIn routerManager={routerManager} />
             )

@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import {View, Text, Image, TouchableOpacity, StyleSheet, Dimensions} from 'react-native';
-import { AntDesign, Ionicons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
-import Logo from '../assets/logo.png';
-import Pin from '../assets/pin.png';
-import New from '../assets/new.png';
-import SvgCircle from '../assets/svg/circle';
+import SvgCircle from '../../assets/svg/circle';
 
 //components
 import Description from './descriptionSlider';
@@ -21,7 +18,6 @@ export default function Slider ({routerManager}){
             routerManager(1);
         }else{
             setSlider(slider+1);
-            console.log(slider);
         }
     }
 
@@ -84,7 +80,7 @@ const Style = StyleSheet.create({
     },
     skipeButton: {
         position: 'absolute',
-        top: 20,
+        top: 40,
         right: 30,
         width: 60,
         height: 28,

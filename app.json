@@ -1,11 +1,10 @@
 {
   "expo": {
-    "name": "procura_pet",
+    "name": "Procura Pet",
     "slug": "procura_pet",
     "platforms": [
       "ios",
-      "android",
-      "web"
+      "android"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
@@ -22,7 +21,13 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.procurapet.procurapet",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.procurapet.procurapet",
+      "versionCode": 1
     }
   }
 }

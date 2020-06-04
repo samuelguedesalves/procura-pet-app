@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, Image } from 'react-native';
+import { Image } from 'react-native';
 
-import Logo from '../assets/logo.png';
-import Pin from '../assets/pin.png';
-import New from '../assets/new.png';
+import Logo from '../../assets/logo.png';
+import Pin from '../../assets/pin.png';
+import New from '../../assets/new.png';
 
 export default function ImageSlider({slider}){
     if(slider === 0){

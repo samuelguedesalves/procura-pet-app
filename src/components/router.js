@@ -7,7 +7,7 @@ import { SimpleLineIcons, Feather } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import Casos from '../components/casos';
+import CasesListStack from './casesListStack';
 
 const icons = {
     Casos: {
@@ -66,7 +66,7 @@ export default function Router (){
                     inactiveTintColor: '#e4e4e4'
                 }}
             >
-                <Tab.Screen name="Casos" component={Casos} />
+                <Tab.Screen name="Casos" component={CasesListStack} />
                 <Tab.Screen name="Novo" component={Novo} />
                 <Tab.Screen name="Perfil" component={Perfil} />
             </Tab.Navigator>
