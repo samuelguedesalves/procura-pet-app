@@ -8,6 +8,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import CasesListStack from './casesListStack';
+import NewCase from './newCase';
 
 const icons = {
     Casos: {
@@ -22,14 +23,6 @@ const icons = {
         lib: Feather,
         name: 'user'
     }
-}
-
-function Novo() {
-    return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Novo!</Text>
-        </View>
-    );
 }
 
 function Perfil() {
@@ -63,11 +56,11 @@ export default function Router (){
                         borderTopSize: 2,
                     },
                     activeTintColor: '#fff',
-                    inactiveTintColor: '#e4e4e4'
+                    inactiveTintColor: '#A55223'
                 }}
             >
                 <Tab.Screen name="Casos" component={CasesListStack} />
-                <Tab.Screen name="Novo" component={Novo} />
+                <Tab.Screen name="Novo" component={NewCase} />
                 <Tab.Screen name="Perfil" component={Perfil} />
             </Tab.Navigator>
         </NavigationContainer>

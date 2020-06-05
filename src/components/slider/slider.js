@@ -27,7 +27,7 @@ export default function Slider ({routerManager}){
                 <SvgCircle/>
             </View>
             {slider != 0?
-                    <TouchableOpacity style={Style.skipeButton} >
+                    <TouchableOpacity style={Style.skipeButton} onPress={()=>routerManager(1)}>
                         <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#888' }} >Pular</Text>
                         <Ionicons name="ios-arrow-forward" size={24} color="#888" />
                     </TouchableOpacity>

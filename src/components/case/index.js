@@ -13,11 +13,23 @@ import {
     ButtonContactMe,
     TextButton,
     MessageIcon,
+
+    ContainerBackButton,
+    IconBack,
+    TextButtonBack,
 } from './style';
 
-export default function Case ({route}){
+export default function Case ({route, navigation}){
     return(
         <Container>
+
+            <ContainerBackButton
+                onPress={()=>navigation.navigate('CasesList')}
+            >
+                <IconBack/>
+                <TextButtonBack>Voltar</TextButtonBack>
+            </ContainerBackButton>
+
             <Image source={{ uri: route.params.imageUrl }} />
             <CaseTitle>{ route.params.title }</CaseTitle>
 

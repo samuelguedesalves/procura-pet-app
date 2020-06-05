@@ -12,8 +12,8 @@ import Card from '../card/index';
 
 const cases = [
     {
-        title: 'Thor o cachoro!',
-        description: 'Cachorrinho desaparecido neste final de semana',
+        title: 'Thor o cachoro filho da',
+        description: 'Cachorrinho desaparecido neste final de semana ajuda ai ajuda ai ajuda ai ajuda ai ajuda ai ajuda ai ajuda ai ajuda ai ajuda ai ajuda ai ajuda ai ajuda ai ajuda ai ajuda ai ajuda ai ajuda ai ajuda ai ajuda ai  ajuda ai ajuda ai ajuda ai',
         imageUrl: 'https://res.cloudinary.com/dbj96cpoe/image/upload/v1588392988/mqs4w6s7uzljpnlxmzq6.jpg',
         localization: 'JI-PARANÁ',
         phone: '69993736357',
@@ -43,6 +43,27 @@ const cases = [
         title: 'Thor o cachoro!',
         description: 'Cachorrinho desaparecido neste final de semana',
         imageUrl: 'https://res.cloudinary.com/dbj96cpoe/image/upload/v1588392988/mqs4w6s7uzljpnlxmzq6.jpg',
+        localization: 'ji-paraná',
+        phone: '69993736357',
+    },
+    {
+        title: 'Thor o cachoro!',
+        description: 'Cachorrinho desaparecido neste final de semana',
+        imageUrl: 'https://res.cloudinary.com/dbj96cpoe/image/upload/v1588392988/mqs4w6s7uzljpnlxmzq6.jpg',
+        localization: 'ji-paraná',
+        phone: '69993736357',
+    },
+    {
+        title: 'Thor o cachoro!',
+        description: 'Cachorrinho desaparecido neste final de semana',
+        imageUrl: 'https://res.cloudinary.com/dbj96cpoe/image/upload/v1588392988/mqs4w6s7uzljpnlxmzq6.jpg',
+        localization: 'ji-paraná',
+        phone: '69993736357',
+    },
+    {
+        title: 'Magrão',
+        description: 'Perdi meu lançhe!!',
+        imageUrl: 'https://res.cloudinary.com/dbj96cpoe/image/upload/v1588377128/vr9kjqfzk4tphmeovthb.jpg',
         localization: 'ji-paraná',
         phone: '69993736357',
     },

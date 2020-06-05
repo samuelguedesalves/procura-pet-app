@@ -7,7 +7,7 @@ export default function ButtonSlider({ slider, skipSlider, width }){
         return(
             <TouchableOpacity style={Style.buttom} onPress={ () => skipSlider() } >
                 <Text style={Style.text} >Conhecer o App</Text>
-                <AntDesign name="arrowright" size={24} color="#fff" />
+                <AntDesign name="arrowright" size={24} color="#fff" style={{marginLeft: 10}} />
             </TouchableOpacity>
         );
     }else{
@@ -66,7 +66,6 @@ const Style = StyleSheet.create({
         shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.8,
         shadowRadius: 2,  
-        elevation: 3,
     },
     text:{
         color: '#fff',

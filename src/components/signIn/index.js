@@ -49,7 +49,7 @@ export default function SignIn({routerManager}){
                     <Text style={Style.title} >Login</Text>
 
                         <TextInput placeholder='E-mail' style={Style.input}/>
-                        <TextInput placeholder='Senha' style={[Style.input, { marginTop: 25, }]}/>
+                        <TextInput placeholder='Senha' textContentType="password" style={[Style.input, { marginTop: 25, }]}/>
 
                         <TouchableOpacity 
                             style={[Style.input, { 
@@ -102,7 +102,6 @@ const Style = StyleSheet.create({
         shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.8,
         shadowRadius: 2,  
-        elevation: 3,
     },
     title: {
         fontSize: 40,

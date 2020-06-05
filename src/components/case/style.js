@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Feather } from '@expo/vector-icons';
+import { Feather, Entypo } from '@expo/vector-icons';
 
 export const Container = styled.View`
     padding: 85px 30px 0px 30px;
@@ -79,3 +79,21 @@ export const TextButton = styled.Text`
 export const MessageIcon = () => {
     return <Feather name="message-circle" size={24} color="#eee" />
 }
+
+export const ContainerBackButton = styled.TouchableOpacity`
+    flex-direction: row;
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    align-items: center;
+`;
+
+export const IconBack = () => {
+    return <Entypo name="chevron-left" size={24} color="#333" />
+}
+
+export const TextButtonBack = styled.Text`
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+`;
