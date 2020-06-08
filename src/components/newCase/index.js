@@ -27,7 +27,10 @@ export default function NewCase (){
     const [descriptionCase, setDescriptionCase] = useState('');
 
     useEffect(()=>{
-        Keyboard.addListener("keyboardDidHide", () => setInputFocus(false));
+        Keyboard.addListener("keyboardDidHide",() => {
+            Keyboard.dismiss(); 
+            setInputFocus(false);
+        });
     },[]);
 
     function handleTitleCase(text){

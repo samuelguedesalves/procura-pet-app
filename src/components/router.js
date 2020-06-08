@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { View, Text } from 'react-native';
-
 import { SimpleLineIcons, Feather } from '@expo/vector-icons';
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -9,6 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import CasesListStack from './casesListStack';
 import NewCase from './newCase';
+import UserStack from './userStack';
 
 const icons = {
     Casos: {
@@ -25,17 +24,10 @@ const icons = {
     }
 }
 
-function Perfil() {
-    return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Perfil!</Text>
-        </View>
-    );
-}
-
 const Tab = createBottomTabNavigator();
 
 export default function Router (){
+
     return(
         <NavigationContainer>
             <Tab.Navigator
@@ -52,8 +44,8 @@ export default function Router (){
                         height: 60,
                         paddingBottom: 5,
                         paddingTop: 5,
-                        borderTopColor: '#fff',
-                        borderTopSize: 2,
+                        borderTopColor: '#e4e4e4',
+                        borderTopWidth: 1,
                     },
                     activeTintColor: '#fff',
                     inactiveTintColor: '#A55223'
@@ -61,7 +53,7 @@ export default function Router (){
             >
                 <Tab.Screen name="Casos" component={CasesListStack} />
                 <Tab.Screen name="Novo" component={NewCase} />
-                <Tab.Screen name="Perfil" component={Perfil} />
+                <Tab.Screen name="Perfil" component={UserStack} />
             </Tab.Navigator>
         </NavigationContainer>
     );
